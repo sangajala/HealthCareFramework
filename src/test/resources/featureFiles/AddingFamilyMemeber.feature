@@ -12,14 +12,14 @@ Feature: Adding a new Member
       Given The user clicks on Family Members tab
       And The user clicks on Add family member tab
       Then The user should be navigated to Add new members Page
-
       When The user enters selectsRelation firstName PrefName lastName
-
       |selectRelation|firstName|PrefName|lastName|
       |Child         |Kav      |Kav     |Sharma  |
-
       And The user clicks on Save button
       Then The user should be able to successfully add the member
+
+
+
 
 
 

@@ -13,6 +13,8 @@ import java.net.URL;
 
 public class BrowserFactory
 {
+
+    private static final String AWS_URL = "http://18.221.144.225:4444/";
    /* static WebDriver driver;
     //Invoke Browser - Local/Browserstack/Docker/AWS/HEadless
 
@@ -40,27 +42,19 @@ public class BrowserFactory
 
         if(driver==null){
 
-            if(!Constants.REMOTE_VM.equals("")){
-
-                if(Constants.REMOTE_VM.equals("LOCAL")){
-
-                    System.setProperty("webdriver.chrome.driver",System.getProperty("user.dir")+"//"+"chromedriver");
-                    Capabilities capabilities = DesiredCapabilities.chrome();
-
-
-                    try {
-                        driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"),capabilities);
-                    } catch (MalformedURLException e) {
-                        e.printStackTrace();
-                    }
-
-                }
-            }
-            else {
+            {
 
                 WebDriverManager.chromedriver().setup();
 
                 driver = new ChromeDriver();
+
+//                Capabilities capabilities = DesiredCapabilities.chrome();
+//
+//                try {
+//                    driver = new RemoteWebDriver(new URL(AWS_URL),capabilities);
+//                } catch (MalformedURLException e) {
+//                    e.printStackTrace();
+//                }
             }
 
 
