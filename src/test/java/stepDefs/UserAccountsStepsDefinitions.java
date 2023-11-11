@@ -4,6 +4,7 @@ import config.Constants;
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
 import io.cucumber.java.en.Given;
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import pageObjects.HomePage;
 import pageObjects.signInPages.LoginUsernamePage;
@@ -44,4 +45,9 @@ public class UserAccountsStepsDefinitions extends StepDefinitions {
 
     }
 
+    @When("user click on Login Link")
+    public void userClickOnLoginLink() throws Exception {
+        homePage = new HomePage(driver);
+    homePage.gotoLoginPage();
+    }
 }

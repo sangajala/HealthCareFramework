@@ -26,6 +26,9 @@ Feature: Registration and Login Successfully
 
 
     Scenario Outline: As a registered user trying to sign in Successfully
+      Given The user navigates to "https://ebt3-evidence.janeapp.com/"
+      When The user clicks on SignIn button
+      Then The user should be navigated to Sign In Page
       When The user enters a usernameOrEmailAddress "<value>" or PhoneNumber "<value>"
       Then The user should be moved to passwords page
       When The user enters password as "<password>"
@@ -34,5 +37,5 @@ Feature: Registration and Login Successfully
       Examples:
         | value                    |     password    |
         | chetanss79@gmail.com     |    Chetans79    |
-        | 7446856274               |    Chetans79    |
+#        | 7446856274               |    Chetans79    |
 

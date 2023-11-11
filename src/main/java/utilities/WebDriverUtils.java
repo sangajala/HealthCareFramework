@@ -20,6 +20,28 @@ public class WebDriverUtils
             throw new Exception("HealthCare Project: Element with text"+text+" is not existing");
         }
     }
+    public static void clickOnButton(WebDriver driver,String text) throws Exception {
+//        if(isElementExists(driver,By.linkText(text)))
+        {
+            driver.findElement(By.xpath("//*[contains(text(),'"+text+"')]")).click();
+        }
+//        else
+        {
+//            throw new Exception("HealthCare Project: Element with text"+text+" is not existing");
+        }
+    }
+
+    public static void clickOnSpan(WebDriver driver,String text) throws Exception {
+//        if(isElementExists(driver,By.linkText(text)))
+        {
+            driver.findElement(By.xpath("//span[text()='"+text+"']")).click();
+        }
+//        else
+        {
+//            throw new Exception("HealthCare Project: Element with text"+text+" is not existing");
+        }
+    }
+
 
     public static boolean isElementExists(WebDriver driver,By by){
 

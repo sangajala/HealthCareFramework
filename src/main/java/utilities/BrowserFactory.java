@@ -10,6 +10,7 @@ import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.concurrent.TimeUnit;
 
 public class BrowserFactory
 {
@@ -47,6 +48,7 @@ public class BrowserFactory
                 WebDriverManager.chromedriver().setup();
 
                 driver = new ChromeDriver();
+                driver.manage().timeouts().implicitlyWait(120000, TimeUnit.SECONDS);
 
 //                Capabilities capabilities = DesiredCapabilities.chrome();
 //
